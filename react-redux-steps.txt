@@ -1,0 +1,41 @@
+Step#1:
+1) inside src directory create index.js
+2) import the libraries:
+    --  import React from "react";
+    --  import ReactDOM from "react-dom";
+    --  import { Provider } from "react-redux";
+    --  import { createStore } from "redux";
+
+    --  import App from "./components/App";
+    --  import reducers from "./reducers";
+    
+3) define ReactDOM.render()
+
+4) wrap App with provider as the first argument and pass the store with createStore from reducers:
+ <Provider store={createStore(reducers)}>
+    <App />
+  </Provider>
+
+5) indicate where to render as the second argument like:
+    document.querySelector('#root')
+    
+Step#2
+1) create a default App functional or class component inside the conponents directory
+
+Step#3
+1) create a reducer folder inside src and create a index.js file inside that
+2) import combine reducers from redux
+    import { combineReducers } from "redux";
+3) export the combine reducers, pass a random object to get the things started 
+    export default combineReducers({ test: () => 10 });
+    
+Step#4
+1) create a folder called actions and create a index.js file
+
+** use redux thunk for async functions
+
+Why cant we use async in plain redux?
+- Action creators must be plain JS objects with a type property {an optional payload}. 
+    Reason: async await creates a complicated code in ES2015 which runs in our browser. in there at some time it returns the request object instead of the usual return.
+- By the time our action gets to a reducer, we wont have fetched our data
+    Reason: if we remove the async await, it would not fetch the data in time. Reducers cannot be delayed
