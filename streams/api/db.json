@@ -1,0 +1,27 @@
+{
+  "streams": [
+    {
+      "title": "First Stream",
+      "description": "first entry into the system",
+      "id": 1
+    },
+    {
+      "title": "Stream with ID",
+      "description": "Stream made with a userID",
+      "userId": "105232421901048743754",
+      "id": 2
+    },
+    {
+      "title": "progamatic ",
+      "description": "programatic routing",
+      "userId": "105232421901048743754",
+      "id": 3
+    },
+    {
+      "title": "refractor",
+      "description": "refractored stream create and make changes to stream edit",
+      "userId": "105232421901048743754",
+      "id": 4
+    }
+  ]
+}
